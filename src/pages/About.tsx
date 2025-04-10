@@ -6,17 +6,17 @@ const About = () => {
   const { t } = useLanguage();
 
   return (
-    <div 
-      className="min-h-screen pt-20"
-      style={{
-        backgroundImage: 'url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1920&q=80")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundBlendMode: 'overlay'
-      }}
-    >
-      <section className="section-container">
+    <div className="min-h-screen pt-20 relative">
+      <div 
+        className="absolute inset-0 z-0 opacity-20" 
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1920&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
+      <section className="section-container relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-white mb-8">{t('nav.about')}</h1>
           

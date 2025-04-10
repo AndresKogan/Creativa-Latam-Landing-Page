@@ -14,17 +14,17 @@ const Services = () => {
   const ecommerceFeatures = Array(5).fill('Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
 
   return (
-    <div 
-      className="min-h-screen pt-20"
-      style={{
-        backgroundImage: 'url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundBlendMode: 'overlay'
-      }}
-    >
-      <section className="section-container">
+    <div className="min-h-screen pt-20 relative">
+      <div 
+        className="absolute inset-0 z-0 opacity-20" 
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
+      <section className="section-container relative z-10">
         <h1 className="text-4xl font-bold text-white mb-12 text-center">{t('nav.services')}</h1>
         
         <div className="grid md:grid-cols-2 gap-8 mb-16">
