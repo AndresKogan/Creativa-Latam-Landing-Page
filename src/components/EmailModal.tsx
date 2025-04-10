@@ -14,13 +14,24 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-brand-darkGray border-brand-gray text-white sm:max-w-[425px]">
+      <DialogContent 
+        className="bg-brand-darkGray border-brand-gray text-white sm:max-w-[425px] backdrop-blur-md"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1473091534298-04dcbce3278c?auto=format&fit=crop&w=1920&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundBlendMode: 'overlay'
+        }}
+      >
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-white">
             {t('email.title')}
           </DialogTitle>
         </DialogHeader>
-        <ContactForm onSuccess={onClose} />
+        <div className="bg-brand-darkGray bg-opacity-80 p-4 rounded-md backdrop-blur-sm">
+          <ContactForm onSuccess={onClose} />
+        </div>
       </DialogContent>
     </Dialog>
   );

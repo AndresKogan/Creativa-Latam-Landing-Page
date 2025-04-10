@@ -13,9 +13,9 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-b from-brand-dark to-brand-darkGray">
         <div 
-          className="absolute inset-0 z-0 opacity-10" 
+          className="absolute inset-0 z-0 opacity-20" 
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
+            backgroundImage: 'url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

@@ -6,7 +6,16 @@ const Solutions = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen pt-20">
+    <div 
+      className="min-h-screen pt-20"
+      style={{
+        backgroundImage: 'url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundBlendMode: 'overlay'
+      }}
+    >
       <section className="section-container">
         <h1 className="text-4xl font-bold text-white mb-12 text-center">
           {t('nav.solutions')}
@@ -14,7 +23,7 @@ const Solutions = () => {
         
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Metrics & Analysis */}
-          <div className="bg-brand-darkGray rounded-lg p-8 border border-brand-blue">
+          <div className="bg-brand-darkGray bg-opacity-90 rounded-lg p-8 border border-brand-blue backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-white mb-6 border-b border-brand-blue pb-3">
               {t('solutions.metrics.title')}
             </h2>
@@ -26,7 +35,7 @@ const Solutions = () => {
           </div>
           
           {/* Communication 360º */}
-          <div className="bg-brand-darkGray rounded-lg p-8 border border-brand-red">
+          <div className="bg-brand-darkGray bg-opacity-90 rounded-lg p-8 border border-brand-red backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-white mb-6 border-b border-brand-red pb-3">
               {t('solutions.communication.title')}
             </h2>
@@ -40,7 +49,7 @@ const Solutions = () => {
           </div>
           
           {/* Digital Assets */}
-          <div className="bg-brand-darkGray rounded-lg p-8 border border-brand-yellow">
+          <div className="bg-brand-darkGray bg-opacity-90 rounded-lg p-8 border border-brand-yellow backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-white mb-6 border-b border-brand-yellow pb-3">
               {t('solutions.assets.title')}
             </h2>

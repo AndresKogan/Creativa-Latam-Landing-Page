@@ -12,7 +12,16 @@ const Contact = () => {
   const [isCalendlyModalOpen, setIsCalendlyModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen pt-20">
+    <div 
+      className="min-h-screen pt-20"
+      style={{
+        backgroundImage: 'url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundBlendMode: 'overlay'
+      }}
+    >
       <section className="section-container">
         <h1 className="text-4xl font-bold text-white mb-12 text-center">
           {t('contact.title')}
@@ -20,7 +29,7 @@ const Contact = () => {
         
         <div className="grid md:grid-cols-3 gap-8">
           {/* Email Contact */}
-          <div className="bg-brand-blue rounded-lg p-6">
+          <div className="bg-brand-blue bg-opacity-90 rounded-lg p-6 backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3">
               {t('contact.email.title')}
             </h2>
@@ -28,7 +37,7 @@ const Contact = () => {
           </div>
           
           {/* WhatsApp Contact */}
-          <div className="bg-brand-red rounded-lg p-6 flex flex-col items-center justify-center">
+          <div className="bg-brand-red bg-opacity-90 rounded-lg p-6 flex flex-col items-center justify-center backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3 w-full">
               {t('contact.text.title')}
             </h2>
@@ -45,7 +54,7 @@ const Contact = () => {
           </div>
           
           {/* Calendly Contact */}
-          <div className="bg-brand-lightBlue rounded-lg p-6 flex flex-col items-center justify-center">
+          <div className="bg-brand-lightBlue bg-opacity-90 rounded-lg p-6 flex flex-col items-center justify-center backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3 w-full">
               {t('contact.meet.title')}
             </h2>

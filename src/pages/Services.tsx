@@ -14,13 +14,22 @@ const Services = () => {
   const ecommerceFeatures = Array(5).fill('Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
 
   return (
-    <div className="min-h-screen pt-20">
+    <div 
+      className="min-h-screen pt-20"
+      style={{
+        backgroundImage: 'url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundBlendMode: 'overlay'
+      }}
+    >
       <section className="section-container">
         <h1 className="text-4xl font-bold text-white mb-12 text-center">{t('nav.services')}</h1>
         
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Branding Section */}
-          <div className="bg-brand-blue rounded-lg overflow-hidden">
+          <div className="bg-brand-blue bg-opacity-90 rounded-lg overflow-hidden backdrop-blur-sm">
             <div className="p-8">
               <h2 className="text-3xl font-bold text-white mb-6">{t('services.branding.title')}</h2>
               <ul className="space-y-4">
@@ -35,7 +44,7 @@ const Services = () => {
           </div>
           
           {/* E-commerce Section */}
-          <div className="bg-brand-lightBlue rounded-lg overflow-hidden">
+          <div className="bg-brand-lightBlue bg-opacity-90 rounded-lg overflow-hidden backdrop-blur-sm">
             <div className="p-8">
               <h2 className="text-3xl font-bold text-white mb-6">{t('services.ecommerce.title')}</h2>
               <ul className="space-y-4">
@@ -51,7 +60,7 @@ const Services = () => {
         </div>
         
         {/* Contact Section */}
-        <div className="bg-brand-darkGray rounded-lg p-8 text-center">
+        <div className="bg-brand-darkGray bg-opacity-90 rounded-lg p-8 text-center backdrop-blur-sm">
           <h2 className="text-3xl font-bold text-white mb-8">{t('services.contactUs')}</h2>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
