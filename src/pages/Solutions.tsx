@@ -23,42 +23,48 @@ const Solutions = () => {
         
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Metrics & Analysis */}
-          <div className="bg-white rounded-lg p-8 border border-brand-blue backdrop-blur-sm">
-            <h2 className="text-2xl font-bold text-brand-dark mb-6 border-b border-brand-blue pb-3">
-              {t('solutions.metrics.title')}
-            </h2>
-            <ul className="space-y-4">
-              <li className="text-brand-dark text-lg">{t('solutions.metrics.item1')}</li>
-              <li className="text-brand-dark text-lg">{t('solutions.metrics.item2')}</li>
-              <li className="text-brand-dark text-lg">{t('solutions.metrics.item3')}</li>
-            </ul>
+          <div className="bg-white rounded-lg p-1 shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300">
+            <div className="border-4 border-brand-blue rounded-md h-full p-6">
+              <h2 className="text-2xl font-bold text-brand-dark mb-6 text-center border-b-2 border-brand-blue pb-3">
+                {t('solutions.metrics.title')}
+              </h2>
+              <ul className="space-y-4">
+                <li className="text-brand-dark text-lg">{t('solutions.metrics.item1')}</li>
+                <li className="text-brand-dark text-lg">{t('solutions.metrics.item2')}</li>
+                <li className="text-brand-dark text-lg">{t('solutions.metrics.item3')}</li>
+              </ul>
+            </div>
           </div>
           
           {/* Communication 360º */}
-          <div className="bg-white rounded-lg p-8 border border-brand-red backdrop-blur-sm">
-            <h2 className="text-2xl font-bold text-brand-dark mb-6 border-b border-brand-red pb-3">
-              {t('solutions.communication.title')}
-            </h2>
-            <ul className="space-y-4">
-              <li className="text-brand-dark text-lg">{t('solutions.communication.item1')}</li>
-              <li className="text-brand-dark text-lg">{t('solutions.communication.item2')}</li>
-              <li className="text-brand-dark text-lg">{t('solutions.communication.item3')}</li>
-              <li className="text-brand-dark text-lg">{t('solutions.communication.item4')}</li>
-              <li className="text-brand-dark text-lg">{t('solutions.communication.item5')}</li>
-            </ul>
+          <div className="bg-white rounded-lg p-1 shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300">
+            <div className="border-4 border-brand-red rounded-md h-full p-6">
+              <h2 className="text-2xl font-bold text-brand-dark mb-6 text-center border-b-2 border-brand-red pb-3">
+                {t('solutions.communication.title')}
+              </h2>
+              <ul className="space-y-4">
+                <li className="text-brand-dark text-lg">{t('solutions.communication.item1')}</li>
+                <li className="text-brand-dark text-lg">{t('solutions.communication.item2')}</li>
+                <li className="text-brand-dark text-lg">{t('solutions.communication.item3')}</li>
+                <li className="text-brand-dark text-lg">{t('solutions.communication.item4')}</li>
+                <li className="text-brand-dark text-lg">{t('solutions.communication.item5')}</li>
+              </ul>
+            </div>
           </div>
           
           {/* Digital Assets */}
-          <div className="bg-white rounded-lg p-8 border border-brand-yellow backdrop-blur-sm">
-            <h2 className="text-2xl font-bold text-brand-dark mb-6 border-b border-brand-yellow pb-3">
-              {t('solutions.assets.title')}
-            </h2>
-            <ul className="space-y-4">
-              <li className="text-brand-dark text-lg">{t('solutions.assets.item1')}</li>
-              <li className="text-brand-dark text-lg">{t('solutions.assets.item2')}</li>
-              <li className="text-brand-dark text-lg">{t('solutions.assets.item3')}</li>
-              <li className="text-brand-dark text-lg">{t('solutions.assets.item4')}</li>
-            </ul>
+          <div className="bg-white rounded-lg p-1 shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300">
+            <div className="border-4 border-brand-yellow rounded-md h-full p-6">
+              <h2 className="text-2xl font-bold text-brand-dark mb-6 text-center border-b-2 border-brand-yellow pb-3">
+                {t('solutions.assets.title')}
+              </h2>
+              <ul className="space-y-4">
+                <li className="text-brand-dark text-lg">{t('solutions.assets.item1')}</li>
+                <li className="text-brand-dark text-lg">{t('solutions.assets.item2')}</li>
+                <li className="text-brand-dark text-lg">{t('solutions.assets.item3')}</li>
+                <li className="text-brand-dark text-lg">{t('solutions.assets.item4')}</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
