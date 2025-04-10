@@ -23,7 +23,7 @@ const Solutions = () => {
         
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Metrics & Analysis */}
-          <div className="bg-white rounded-lg p-1 shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white bg-opacity-80 rounded-lg p-1 shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300">
             <div className="border-4 border-brand-blue rounded-md h-full p-6">
               <h2 className="text-2xl font-bold text-brand-dark mb-6 text-center border-b-2 border-brand-blue pb-3">
                 {t('solutions.metrics.title')}
@@ -37,7 +37,7 @@ const Solutions = () => {
           </div>
           
           {/* Communication 360º */}
-          <div className="bg-white rounded-lg p-1 shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white bg-opacity-80 rounded-lg p-1 shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300">
             <div className="border-4 border-brand-red rounded-md h-full p-6">
               <h2 className="text-2xl font-bold text-brand-dark mb-6 text-center border-b-2 border-brand-red pb-3">
                 {t('solutions.communication.title')}
@@ -53,7 +53,7 @@ const Solutions = () => {
           </div>
           
           {/* Digital Assets */}
-          <div className="bg-white rounded-lg p-1 shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white bg-opacity-80 rounded-lg p-1 shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300">
             <div className="border-4 border-brand-yellow rounded-md h-full p-6">
               <h2 className="text-2xl font-bold text-brand-dark mb-6 text-center border-b-2 border-brand-yellow pb-3">
                 {t('solutions.assets.title')}
