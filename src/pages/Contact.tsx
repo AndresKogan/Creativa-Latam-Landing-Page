@@ -23,7 +23,7 @@ const Contact = () => {
         }}></div>
         
         <motion.div 
-          className="relative z-10 max-w-md w-full bg-black/20 backdrop-blur-md p-8 rounded-lg border border-white/10 shadow-xl"
+          className="relative z-10 max-w-md w-full"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -51,7 +51,7 @@ const Contact = () => {
         }}></div>
         
         <motion.div 
-          className="relative z-10 max-w-md w-full bg-black/20 backdrop-blur-md p-8 rounded-lg border border-white/10 shadow-xl flex flex-col items-center justify-center"
+          className="relative z-10 max-w-md w-full flex flex-col items-center justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -85,7 +85,7 @@ const Contact = () => {
         }}></div>
         
         <motion.div 
-          className="relative z-10 max-w-md w-full bg-black/20 backdrop-blur-md p-8 rounded-lg border border-white/10 shadow-xl flex flex-col items-center justify-center"
+          className="relative z-10 max-w-md w-full flex flex-col items-center justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}

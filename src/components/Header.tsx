@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Search, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const { t, language, setLanguage } = useLanguage();
@@ -14,9 +14,14 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-brand-dark border-b border-brand-gray px-4 py-4">
+    <header className="fixed w-full top-0 z-50 border-b border-brand-gray/20 px-4 py-4 bg-transparent backdrop-blur-sm">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/ffa79e4f-f018-4cf7-b52f-ab1e7be6d5c0.png" 
+            alt="Creativa Latam Logo" 
+            className="h-8 mr-3" 
+          />
           <span className="text-2xl font-bold text-white">CreativaLatam</span>
         </Link>
 
@@ -46,6 +51,7 @@ const Header = () => {
           <Link to="/contact" className="text-white hover:text-brand-lightBlue transition-colors">
             {t('nav.contact')}
           </Link>
+          {/* Search button commented out for now
           <Button 
             variant="ghost" 
             size="icon"
@@ -54,6 +60,7 @@ const Header = () => {
           >
             <Search className="h-5 w-5" />
           </Button>
+          */}
           <Button 
             variant="outline"
             size="sm"
@@ -106,6 +113,7 @@ const Header = () => {
               >
                 {language === 'en' ? 'ES' : 'EN'}
               </Button>
+              {/* Search button commented out for now
               <Button 
                 variant="ghost" 
                 size="icon"
@@ -113,6 +121,7 @@ const Header = () => {
               >
                 <Search className="h-5 w-5" />
               </Button>
+              */}
             </div>
           </nav>
         </div>

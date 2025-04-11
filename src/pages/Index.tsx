@@ -10,9 +10,9 @@ const Index = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="h-screen flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-b from-brand-dark to-brand-darkGray">
+      <section className="relative h-screen flex items-center bg-gradient-to-b from-brand-dark to-brand-darkGray overflow-hidden">
         <div 
           className="absolute inset-0 z-0 opacity-20" 
           style={{
@@ -22,7 +22,7 @@ const Index = () => {
           }}
         ></div>
         
-        <div className="container mx-auto px-4 py-32 z-10">
+        <div className="container mx-auto px-4 py-12 z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <motion.img 
               src="/lovable-uploads/ffa79e4f-f018-4cf7-b52f-ab1e7be6d5c0.png" 
@@ -43,7 +43,7 @@ const Index = () => {
             </motion.h1>
             
             <motion.div 
-              className="bg-brand-darkGray bg-opacity-80 backdrop-blur-sm p-6 rounded-lg max-w-2xl mx-auto border border-white/10"
+              className="max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}

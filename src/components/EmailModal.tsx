@@ -41,7 +41,7 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="bg-brand-darkGray bg-opacity-80 p-5 rounded-lg relative z-10 border border-white/10"
+          className="relative z-10"
         >
           <ContactForm onSuccess={onClose} />
         </motion.div>

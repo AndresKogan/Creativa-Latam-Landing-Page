@@ -7,7 +7,7 @@ const About = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen pt-20 relative">
+    <div className="h-screen pt-20 relative flex items-center">
       <div 
         className="absolute inset-0 z-0 opacity-20" 
         style={{
@@ -20,7 +20,7 @@ const About = () => {
       <section className="section-container relative z-10">
         <div className="max-w-4xl mx-auto">
           <motion.h1 
-            className="text-4xl font-bold text-white mb-8 text-center"
+            className="text-4xl font-bold text-white mb-6 text-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -29,17 +29,17 @@ const About = () => {
           </motion.h1>
           
           <motion.div 
-            className="bg-brand-darkGray bg-opacity-80 rounded-lg p-8 mb-12 backdrop-blur-sm border border-white/10 shadow-xl"
+            className="mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h2 className="text-2xl font-bold text-white mb-4 text-center">Quienes Somos</h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-4">
               Somos tres mentes inquietas, apasionadas por la comunicación y unidas por una misma pasión: 
               llevar marcas al mundo digital y hacerlas brillar.
             </p>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-4">
               Desde el corazón de América Latina, combinamos lo mejor del diseño, la tecnología y la estrategia 
               para crear experiencias que conectan. Uno de nosotros piensa en colores, formas y emociones; otro 
               en líneas de código, algoritmos y funcionalidad; y el tercero en tiempos, flujos y resultados. 
@@ -53,7 +53,6 @@ const About = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div 
-              className="bg-brand-darkGray bg-opacity-80 rounded-lg p-8 backdrop-blur-sm border border-white/10 shadow-xl"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -67,7 +66,6 @@ const About = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-brand-darkGray bg-opacity-80 rounded-lg p-8 backdrop-blur-sm border border-white/10 shadow-xl"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
