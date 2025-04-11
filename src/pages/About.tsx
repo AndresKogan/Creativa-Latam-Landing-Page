@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { motion } from 'framer-motion';
 
 const About = () => {
   const { t } = useLanguage();
@@ -18,37 +19,65 @@ const About = () => {
       ></div>
       <section className="section-container relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-white mb-8">{t('nav.about')}</h1>
+          <motion.h1 
+            className="text-4xl font-bold text-white mb-8 text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {t('nav.about')}
+          </motion.h1>
           
-          <div className="bg-brand-darkGray bg-opacity-90 rounded-lg p-8 mb-12 backdrop-blur-sm">
-            <h2 className="text-2xl font-bold text-white mb-4">Our Story</h2>
+          <motion.div 
+            className="bg-brand-darkGray bg-opacity-80 rounded-lg p-8 mb-12 backdrop-blur-sm border border-white/10 shadow-xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h2 className="text-2xl font-bold text-white mb-4 text-center">Quienes Somos</h2>
             <p className="text-gray-300 mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. 
-              Pellentesque sit amet hendrerit risus, sed porttitor quam. Magna harum nobis obcaecati aperiam laborum aspernatur consectetur.
+              Somos tres mentes inquietas, apasionadas por la comunicación y unidas por una misma pasión: 
+              llevar marcas al mundo digital y hacerlas brillar.
+            </p>
+            <p className="text-gray-300 mb-6">
+              Desde el corazón de América Latina, combinamos lo mejor del diseño, la tecnología y la estrategia 
+              para crear experiencias que conectan. Uno de nosotros piensa en colores, formas y emociones; otro 
+              en líneas de código, algoritmos y funcionalidad; y el tercero en tiempos, flujos y resultados. 
+              Juntos, somos una agencia ágil, creativa y enfocada en hacer que cada proyecto deje huella.
             </p>
             <p className="text-gray-300">
-              Fusce varius, dolor tempor interdum tristique, dui urna bibendum odio, ut imperdiet eros diam eget ex. 
-              Vivamus lacus ipsum, gravida id efficitur eget, maximus eget ipsum. Donec id euismod lacus. 
-              Suspendisse et congue ante, ut dictum est. Ut faucibus lobortis purus, sed sagittis leo scelerisque et.
+              El 70% de las pymes latinoamericanas aún no están en el entorno digital, no necesitan excusas: 
+              necesitan aliados. Y ahí entramos nosotros.
             </p>
-          </div>
+          </motion.div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-brand-darkGray bg-opacity-90 rounded-lg p-8 backdrop-blur-sm">
-              <h2 className="text-2xl font-bold text-white mb-4">Mission</h2>
+            <motion.div 
+              className="bg-brand-darkGray bg-opacity-80 rounded-lg p-8 backdrop-blur-sm border border-white/10 shadow-xl"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <h2 className="text-2xl font-bold text-white mb-4 text-center">Misión</h2>
               <p className="text-gray-300">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. 
-                Pellentesque sit amet hendrerit risus, sed porttitor quam. Magna harum nobis obcaecati aperiam laborum aspernatur consectetur.
+                Digitalizar marcas latinoamericanas mediante estrategias basadas en datos, integrando 
+                soluciones de marketing orientadas al crecimiento sostenible en entornos hispanohablantes 
+                y angloparlantes.
               </p>
-            </div>
+            </motion.div>
             
-            <div className="bg-brand-darkGray bg-opacity-90 rounded-lg p-8 backdrop-blur-sm">
-              <h2 className="text-2xl font-bold text-white mb-4">Vision</h2>
+            <motion.div 
+              className="bg-brand-darkGray bg-opacity-80 rounded-lg p-8 backdrop-blur-sm border border-white/10 shadow-xl"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <h2 className="text-2xl font-bold text-white mb-4 text-center">Visión</h2>
               <p className="text-gray-300">
-                Fusce varius, dolor tempor interdum tristique, dui urna bibendum odio, ut imperdiet eros diam eget ex. 
-                Vivamus lacus ipsum, gravida id efficitur eget, maximus eget ipsum. Donec id euismod lacus.
+                Reducir la brecha digital presente entre las marcas, liderando procesos de transformación 
+                digital con enfoque científico, impacto medible y alcance global.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

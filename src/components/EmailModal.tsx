@@ -26,7 +26,14 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
           }}
         ></div>
         <DialogHeader className="relative z-10">
-          <DialogTitle className="text-2xl font-bold text-white">
+          <DialogTitle className="text-2xl font-bold text-white flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/ffa79e4f-f018-4cf7-b52f-ab1e7be6d5c0.png" 
+              alt="Creativa Latam Logo" 
+              className="w-24 h-auto mb-4"
+            />
+          </DialogTitle>
+          <DialogTitle className="text-2xl font-bold text-white text-center">
             {t('email.title')}
           </DialogTitle>
         </DialogHeader>
@@ -34,7 +41,7 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="bg-brand-darkGray bg-opacity-80 p-5 rounded-lg relative z-10"
+          className="bg-brand-darkGray bg-opacity-80 p-5 rounded-lg relative z-10 border border-white/10"
         >
           <ContactForm onSuccess={onClose} />
         </motion.div>

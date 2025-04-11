@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -23,26 +24,46 @@ const Index = () => {
         
         <div className="container mx-auto px-4 py-32 z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-              {t('home.title')}
-            </h1>
+            <motion.img 
+              src="/lovable-uploads/ffa79e4f-f018-4cf7-b52f-ab1e7be6d5c0.png" 
+              alt="Creativa Latam Logo" 
+              className="w-64 h-auto mx-auto mb-8"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            />
             
-            <div className="bg-brand-darkGray bg-opacity-70 backdrop-blur-sm p-6 rounded-lg max-w-2xl mx-auto">
+            <motion.h1 
+              className="text-4xl md:text-6xl font-bold text-white leading-tight"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              {t('home.title')}
+            </motion.h1>
+            
+            <motion.div 
+              className="bg-brand-darkGray bg-opacity-80 backdrop-blur-sm p-6 rounded-lg max-w-2xl mx-auto border border-white/10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               <p className="text-lg text-brand-lightGray mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. 
-                Pellentesque sit amet hendrerit risus, sed porttitor quam. Magna harum nobis obcaecati aperiam laborum aspernatur consectetur.
+                Creativa Latam es un grupo de comunicadores con focalización en diferentes áreas. 
+                Nuestro equipo cuenta con programadores, diseñadores y especialistas en todos los 
+                aspectos que hacen a la comunicación digital.
               </p>
               
               <Link to="/contact">
                 <Button 
                   size="lg" 
-                  className="bg-brand-red hover:bg-brand-red/90 text-white font-medium px-8 py-6 text-lg"
+                  className="bg-brand-red hover:bg-brand-red/90 text-white font-medium px-8 py-6 text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   {t('home.cta')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
