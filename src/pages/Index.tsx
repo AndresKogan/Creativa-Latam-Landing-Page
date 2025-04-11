@@ -25,7 +25,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-12 z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <motion.img 
-              src="/lovable-uploads/ffa79e4f-f018-4cf7-b52f-ab1e7be6d5c0.png" 
+              src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
               alt="Creativa Latam Logo" 
               className="w-64 h-auto mx-auto mb-8"
               initial={{ opacity: 0, y: -20 }}

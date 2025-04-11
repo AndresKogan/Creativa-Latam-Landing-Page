@@ -7,7 +7,7 @@ const About = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="h-screen pt-20 relative flex items-center">
+    <div className="h-screen flex items-center justify-center relative">
       <div 
         className="absolute inset-0 z-0 opacity-20" 
         style={{
@@ -19,6 +19,19 @@ const About = () => {
       ></div>
       <section className="section-container relative z-10">
         <div className="max-w-4xl mx-auto">
+          <motion.div
+            className="flex justify-center mb-8"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <img 
+              src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
+              alt="Creativa Latam Logo" 
+              className="w-32 h-auto mb-4"
+            />
+          </motion.div>
+          
           <motion.h1 
             className="text-4xl font-bold text-white mb-6 text-center"
             initial={{ opacity: 0, y: -20 }}

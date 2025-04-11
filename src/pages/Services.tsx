@@ -33,10 +33,21 @@ const Services = () => {
 
   return (
     <div className="h-screen pt-20">
-      <div className="flex flex-col md:flex-row h-full">
+      <div className="flex flex-col items-center mb-6">
+        <motion.img 
+          src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
+          alt="Creativa Latam Logo" 
+          className="w-32 h-auto"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        />
+      </div>
+      
+      <div className="flex flex-col md:flex-row h-[calc(100%-80px)]">
         {/* Branding Section */}
         <motion.section 
-          className="flex-1 bg-brand-blue relative p-8 md:p-12 flex items-center"
+          className="flex-1 bg-brand-blue relative p-8 md:p-12 flex items-center justify-center"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -50,15 +61,7 @@ const Services = () => {
             }}
           ></div>
           
-          <div className="relative z-10 max-w-md mx-auto">
-            <div className="flex justify-center mb-8">
-              <img 
-                src="/lovable-uploads/ffa79e4f-f018-4cf7-b52f-ab1e7be6d5c0.png" 
-                alt="Creativa Latam Logo" 
-                className="w-32 h-auto"
-              />
-            </div>
-            
+          <div className="relative z-10 max-w-md mx-auto">            
             <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3">
               {t('services.branding.title')}
             </h2>
@@ -85,7 +88,7 @@ const Services = () => {
         
         {/* E-commerce Section */}
         <motion.section 
-          className="flex-1 bg-brand-lightBlue relative p-8 md:p-12 flex items-center"
+          className="flex-1 bg-brand-lightBlue relative p-8 md:p-12 flex items-center justify-center"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -114,7 +117,7 @@ const Services = () => {
             </ul>
             
             <div className="mt-auto flex justify-center">
-              <WhatsAppButton className="px-6 py-3 text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105" />
+              <WhatsAppButton className="bg-brand-red hover:bg-brand-red/90 text-white px-6 py-3 text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105" />
             </div>
           </div>
         </motion.section>

@@ -66,7 +66,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
               <FormLabel>{t('email.service')}</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger>
+                  <SelectTrigger className="bg-white text-black border-white">
                     <SelectValue placeholder={t('email.service')} />
                   </SelectTrigger>
                 </FormControl>
@@ -87,7 +87,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="email@example.com" {...field} />
+                <Input 
+                  placeholder="email@example.com" 
+                  {...field} 
+                  className="bg-white text-black border-white placeholder:text-gray-500"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -103,7 +107,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
               <FormControl>
                 <Textarea 
                   placeholder={t('email.placeholder')} 
-                  className="min-h-[120px]" 
+                  className="min-h-[120px] bg-white text-black border-white placeholder:text-gray-500" 
                   {...field} 
                 />
               </FormControl>
@@ -114,7 +118,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
         
         <Button 
           type="submit" 
-          className="w-full bg-brand-red hover:bg-brand-red/90"
+          className="w-full bg-brand-red hover:bg-brand-red/90 text-white"
           disabled={isSubmitting || !form.formState.isValid}
         >
           {isSubmitting ? "Sending..." : t('email.send')}

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -8,19 +8,20 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const { t, language, setLanguage } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'es' : 'en');
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 border-b border-brand-gray/20 px-4 py-4 bg-transparent backdrop-blur-sm">
+    <header className="fixed w-full top-0 z-50 py-4 px-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/ffa79e4f-f018-4cf7-b52f-ab1e7be6d5c0.png" 
+            src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
             alt="Creativa Latam Logo" 
-            className="h-8 mr-3" 
+            className="h-10 mr-3" 
           />
           <span className="text-2xl font-bold text-white">CreativaLatam</span>
         </Link>
@@ -51,7 +52,7 @@ const Header = () => {
           <Link to="/contact" className="text-white hover:text-brand-lightBlue transition-colors">
             {t('nav.contact')}
           </Link>
-          {/* Search button commented out for now
+          {/* Search button commented out for now 
           <Button 
             variant="ghost" 
             size="icon"
@@ -74,32 +75,32 @@ const Header = () => {
 
       {/* Mobile navigation */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-brand-darkGray border-b border-brand-gray p-4 animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-brand-darkGray/90 backdrop-blur-sm p-4 animate-fade-in">
           <nav className="flex flex-col space-y-4">
             <Link 
               to="/about" 
-              className="text-white py-2 px-4 hover:bg-brand-gray rounded-md transition-colors"
+              className="text-white py-2 px-4 hover:bg-brand-gray/20 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('nav.about')}
             </Link>
             <Link 
               to="/services" 
-              className="text-white py-2 px-4 hover:bg-brand-gray rounded-md transition-colors"
+              className="text-white py-2 px-4 hover:bg-brand-gray/20 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('nav.services')}
             </Link>
             <Link 
               to="/solutions" 
-              className="text-white py-2 px-4 hover:bg-brand-gray rounded-md transition-colors"
+              className="text-white py-2 px-4 hover:bg-brand-gray/20 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('nav.solutions')}
             </Link>
             <Link 
               to="/contact" 
-              className="text-white py-2 px-4 hover:bg-brand-gray rounded-md transition-colors"
+              className="text-white py-2 px-4 hover:bg-brand-gray/20 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('nav.contact')}
@@ -113,15 +114,6 @@ const Header = () => {
               >
                 {language === 'en' ? 'ES' : 'EN'}
               </Button>
-              {/* Search button commented out for now
-              <Button 
-                variant="ghost" 
-                size="icon"
-                className="text-white"
-              >
-                <Search className="h-5 w-5" />
-              </Button>
-              */}
             </div>
           </nav>
         </div>
