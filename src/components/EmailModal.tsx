@@ -3,6 +3,7 @@ import React from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ContactForm from './ContactForm';
+import { motion } from 'framer-motion';
 
 interface EmailModalProps {
   isOpen: boolean;
@@ -14,9 +15,9 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-brand-darkGray border-brand-gray text-white sm:max-w-[425px]">
+      <DialogContent className="bg-brand-darkGray border border-white/10 text-white sm:max-w-[425px] rounded-xl shadow-2xl backdrop-blur-md">
         <div 
-          className="absolute inset-0 z-0 opacity-20" 
+          className="absolute inset-0 z-0 opacity-20 rounded-xl overflow-hidden" 
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1473091534298-04dcbce3278c?auto=format&fit=crop&w=1920&q=80")',
             backgroundSize: 'cover',
@@ -25,13 +26,18 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
           }}
         ></div>
         <DialogHeader className="relative z-10">
-          <DialogTitle className="text-xl font-bold text-white">
+          <DialogTitle className="text-2xl font-bold text-white">
             {t('email.title')}
           </DialogTitle>
         </DialogHeader>
-        <div className="bg-brand-darkGray bg-opacity-80 p-4 rounded-md relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="bg-brand-darkGray bg-opacity-80 p-5 rounded-lg relative z-10"
+        >
           <ContactForm onSuccess={onClose} />
-        </div>
+        </motion.div>
       </DialogContent>
     </Dialog>
   );
