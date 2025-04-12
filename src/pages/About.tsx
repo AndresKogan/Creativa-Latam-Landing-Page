@@ -41,17 +41,17 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h2 className="text-2xl font-bold text-white mb-4 text-center">Quienes Somos</h2>
-            <p className="text-gray-300 mb-4 font-medium">
+            <p className="text-gray-300 mb-4 font-bold">
               Somos tres mentes inquietas, apasionadas por la comunicación y unidas por una misma pasión: 
               llevar marcas al mundo digital y hacerlas brillar.
             </p>
-            <p className="text-gray-300 mb-4 font-medium">
+            <p className="text-gray-300 mb-4 font-bold">
               Desde el corazón de América Latina, combinamos lo mejor del diseño, la tecnología y la estrategia 
               para crear experiencias que conectan. Uno de nosotros piensa en colores, formas y emociones; otro 
               en líneas de código, algoritmos y funcionalidad; y el tercero en tiempos, flujos y resultados. 
               Juntos, somos una agencia ágil, creativa y enfocada en hacer que cada proyecto deje huella.
             </p>
-            <p className="text-gray-300 font-medium">
+            <p className="text-gray-300 font-bold">
               El 70% de las pymes latinoamericanas aún no están en el entorno digital, no necesitan excusas: 
               necesitan aliados. Y ahí entramos nosotros.
             </p>
@@ -64,7 +64,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <h2 className="text-2xl font-bold text-white mb-4 text-center">Misión</h2>
-              <p className="text-gray-300 font-medium">
+              <p className="text-gray-300 font-bold">
                 Digitalizar marcas latinoamericanas mediante estrategias basadas en datos, integrando 
                 soluciones de marketing orientadas al crecimiento sostenible en entornos hispanohablantes 
                 y angloparlantes.
@@ -77,7 +77,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <h2 className="text-2xl font-bold text-white mb-4 text-center">Visión</h2>
-              <p className="text-gray-300 font-medium">
+              <p className="text-gray-300 font-bold">
                 Reducir la brecha digital presente entre las marcas, liderando procesos de transformación 
                 digital con enfoque científico, impacto medible y alcance global.
               </p>

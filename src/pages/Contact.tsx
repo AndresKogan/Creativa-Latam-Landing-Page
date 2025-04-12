@@ -51,7 +51,7 @@ const Contact = () => {
         }}></div>
         
         <motion.div 
-          className="relative z-10 max-w-md w-full flex flex-col items-center justify-center"
+          className="relative z-10 max-w-md w-full flex flex-col items-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -71,7 +71,7 @@ const Contact = () => {
           </p>
           
           <WhatsAppButton 
-            className="px-8 py-6 text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 bg-brand-red hover:bg-brand-red/90"
+            className="px-8 py-6 text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 bg-[#25D366] hover:bg-[#128C7E]"
           />
         </motion.div>
       </section>
@@ -85,7 +85,7 @@ const Contact = () => {
         }}></div>
         
         <motion.div 
-          className="relative z-10 max-w-md w-full flex flex-col items-center justify-center"
+          className="relative z-10 max-w-md w-full flex flex-col items-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -106,7 +106,7 @@ const Contact = () => {
           
           <Button 
             onClick={() => setIsCalendlyModalOpen(true)}
-            className="bg-brand-red hover:bg-brand-red/90 text-white px-8 py-6 text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-6 text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             size="lg"
           >
             {t('contact.meet.button')}
