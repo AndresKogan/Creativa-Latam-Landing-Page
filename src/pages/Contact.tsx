@@ -71,7 +71,7 @@ const Contact = () => {
           </p>
           
           <WhatsAppButton 
-            className="px-8 py-6 text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            className="px-8 py-6 text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 bg-brand-red hover:bg-brand-red/90"
           />
         </motion.div>
       </section>
@@ -106,7 +106,7 @@ const Contact = () => {
           
           <Button 
             onClick={() => setIsCalendlyModalOpen(true)}
-            className="bg-brand-dark hover:bg-brand-darkGray text-white px-8 py-6 text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            className="bg-brand-red hover:bg-brand-red/90 text-white px-8 py-6 text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             size="lg"
           >
             {t('contact.meet.button')}

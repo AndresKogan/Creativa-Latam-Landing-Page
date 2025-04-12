@@ -33,17 +33,6 @@ const Services = () => {
 
   return (
     <div className="h-screen flex flex-col">
-      <div className="absolute top-0 left-0 right-0 z-10 flex justify-center mt-20 md:mt-20">
-        <motion.img 
-          src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
-          alt="Creativa Latam Logo" 
-          className="w-32 h-auto"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        />
-      </div>
-      
       <div className="flex flex-col md:flex-row h-screen">
         {/* Branding Section */}
         <motion.section 
@@ -61,7 +50,7 @@ const Services = () => {
             }}
           ></div>
           
-          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12">            
+          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12 flex flex-col h-full justify-center">            
             <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3">
               {t('services.branding.title')}
             </h2>
@@ -102,7 +91,7 @@ const Services = () => {
             }}
           ></div>
           
-          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12">
+          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12 flex flex-col h-full justify-center">
             <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3">
               {t('services.ecommerce.title')}
             </h2>
@@ -121,6 +110,18 @@ const Services = () => {
             </div>
           </div>
         </motion.section>
+      </div>
+
+      {/* Logo centered at the top */}
+      <div className="absolute top-0 left-0 right-0 z-10 flex justify-center mt-20 md:mt-20">
+        <motion.img 
+          src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
+          alt="Creativa Latam Logo" 
+          className="w-32 h-auto"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        />
       </div>
 
       <EmailModal 
