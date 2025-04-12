@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 py-4 px-4">
+    <header className="fixed w-full top-0 z-50 py-4 px-4 bg-brand-dark/70 backdrop-blur-sm">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img 
