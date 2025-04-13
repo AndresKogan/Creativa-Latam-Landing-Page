@@ -52,13 +52,18 @@
   }
 
   html, body {
-    @apply overflow-hidden;
     height: 100%;
   }
 
   body {
     @apply bg-brand-dark text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  @media (min-width: 768px) {
+    html, body {
+      @apply overflow-hidden;
+    }
   }
 }
 

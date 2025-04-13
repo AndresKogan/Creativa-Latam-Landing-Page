@@ -118,7 +118,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
         
         <Button 
           type="submit" 
-          className="w-full bg-brand-red hover:bg-brand-red/90 text-white font-bold text-lg py-3 shadow-md"
+          className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold text-lg py-4 shadow-md"
           disabled={isSubmitting || !form.formState.isValid}
         >
           {isSubmitting ? "Sending..." : t('email.send')}

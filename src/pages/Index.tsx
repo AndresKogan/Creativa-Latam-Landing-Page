@@ -5,14 +5,16 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className={`${isMobile ? 'min-h-screen' : 'h-screen'} flex flex-col`}>
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center bg-gradient-to-b from-brand-dark to-brand-darkGray overflow-hidden">
+      <section className="relative h-full flex items-center bg-gradient-to-b from-brand-dark to-brand-darkGray overflow-hidden">
         <div 
           className="absolute inset-0 z-0 opacity-20" 
           style={{
@@ -27,14 +29,14 @@ const Index = () => {
             <motion.img 
               src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
               alt="Creativa Latam Logo" 
-              className="w-64 h-auto mx-auto mb-8"
+              className={`${isMobile ? 'w-40 mt-16' : 'w-64'} h-auto mx-auto mb-8`}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             />
             
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold text-white leading-tight"
+              className="text-3xl md:text-6xl font-bold text-white leading-tight"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}

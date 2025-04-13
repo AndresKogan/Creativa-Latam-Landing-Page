@@ -5,13 +5,36 @@ import { Button } from '@/components/ui/button';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import EmailModal from '@/components/EmailModal';
 import { motion } from 'framer-motion';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Services = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+  const isMobile = useIsMobile();
 
-  // Services features lists
-  const brandingFeatures = [
+  // Services features lists for English
+  const brandingFeaturesEn = [
+    "Domain + annual hosting",
+    "Responsive website",
+    "Organic social media",
+    "Targeted advertising",
+    "Creative strategy"
+  ];
+  
+  const ecommerceFeaturesEn = [
+    "Domain + annual hosting",
+    "Responsive website",
+    "Organic social media",
+    "Targeted advertising",
+    "Creative strategy",
+    "E-commerce store",
+    "Conversion optimization",
+    "Email marketing",
+    "User experience"
+  ];
+
+  // Services features lists for Spanish
+  const brandingFeaturesEs = [
     "Dominio + hosting anual",
     "Sitio web reactivo",
     "Redes sociales orgánicas",
@@ -19,7 +42,7 @@ const Services = () => {
     "Estrategia creativa"
   ];
   
-  const ecommerceFeatures = [
+  const ecommerceFeaturesEs = [
     "Dominio + hosting anual",
     "Sitio web reactivo",
     "Redes sociales orgánicas",
@@ -31,12 +54,27 @@ const Services = () => {
     "Experiencia de usuario"
   ];
 
+  const brandingFeatures = language === 'en' ? brandingFeaturesEn : brandingFeaturesEs;
+  const ecommerceFeatures = language === 'en' ? ecommerceFeaturesEn : ecommerceFeaturesEs;
+
   return (
-    <div className="h-screen flex flex-col">
-      <div className="flex flex-col md:flex-row h-screen">
+    <div className={`${isMobile ? 'min-h-screen' : 'h-screen'} flex flex-col`}>
+      <div className="flex flex-col md:flex-row h-full">
+        {/* Logo centered at the top */}
+        <div className="absolute top-0 left-0 right-0 z-10 flex justify-center mt-16">
+          <motion.img 
+            src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
+            alt="Creativa Latam Logo" 
+            className="w-32 h-auto"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          />
+        </div>
+
         {/* Branding Section */}
         <motion.section 
-          className="flex-1 bg-brand-blue relative flex items-center justify-center py-12"
+          className="flex-1 bg-brand-blue relative flex items-center justify-center py-24"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -50,8 +88,8 @@ const Services = () => {
             }}
           ></div>
           
-          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12 flex flex-col justify-between h-[80%]">            
-            <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3">
+          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12 flex flex-col h-auto">            
+            <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3 mt-16">
               {t('services.branding.title')}
             </h2>
             
@@ -77,7 +115,7 @@ const Services = () => {
         
         {/* E-commerce Section */}
         <motion.section 
-          className="flex-1 bg-brand-lightBlue relative flex items-center justify-center py-12"
+          className="flex-1 bg-brand-lightBlue relative flex items-center justify-center py-24"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -91,8 +129,8 @@ const Services = () => {
             }}
           ></div>
           
-          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12 flex flex-col justify-between h-[80%]">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3">
+          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12 flex flex-col h-auto">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3 mt-16">
               {t('services.ecommerce.title')}
             </h2>
             
@@ -110,18 +148,6 @@ const Services = () => {
             </div>
           </div>
         </motion.section>
-      </div>
-
-      {/* Logo centered at the top */}
-      <div className="absolute top-0 left-0 right-0 z-10 flex justify-center mt-16">
-        <motion.img 
-          src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
-          alt="Creativa Latam Logo" 
-          className="w-32 h-auto"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        />
       </div>
 
       <EmailModal 

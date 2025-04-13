@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -51,16 +52,6 @@ const Header = () => {
           <Link to="/contact" className="text-white hover:text-brand-lightBlue transition-colors">
             {t('nav.contact')}
           </Link>
-          {/* Search button commented out for now 
-          <Button 
-            variant="ghost" 
-            size="icon"
-            className="text-white hover:text-brand-lightBlue"
-            aria-label="Search"
-          >
-            <Search className="h-5 w-5" />
-          </Button>
-          */}
           <Button 
             variant="outline"
             size="sm"
