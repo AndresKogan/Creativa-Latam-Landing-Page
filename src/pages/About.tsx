@@ -9,14 +9,14 @@ const About = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className={`${isMobile ? 'min-h-screen' : 'h-screen'} flex items-center justify-center relative`}>
+    <div className={`${isMobile ? 'min-h-screen' : 'h-screen'} flex items-center justify-center relative bg-black`}>
       <div 
-        className="absolute inset-0 z-0 opacity-20 flex items-center justify-center" 
+        className="absolute inset-0 z-0 flex items-center justify-center" 
       >
         <img 
-          src="/lovable-uploads/5d0a39de-db93-4787-8040-fa110c484574.png" 
+          src="/lovable-uploads/6dc73db4-37d2-4481-a5e7-d8479df54154.png" 
           alt="Creativa Latam Logo" 
-          className="w-96 h-auto opacity-20"
+          className="w-96 h-auto opacity-30"
         />
       </div>
       <section className="section-container relative z-10 pt-20">
