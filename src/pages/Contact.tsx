@@ -132,7 +132,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-8">
             <div className="bg-white rounded-full p-4 shadow-lg">
               <Mail className="h-10 w-10 text-brand-red" />
             </div>
@@ -160,7 +160,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-8">
             <div className="bg-white rounded-full p-4 shadow-lg">
               <MessageCircle className="h-10 w-10 text-[#25D366]" />
             </div>
@@ -194,7 +194,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-8">
             <div className="bg-white rounded-full p-4 shadow-lg">
               <Calendar className="h-10 w-10 text-brand-lightBlue" />
             </div>

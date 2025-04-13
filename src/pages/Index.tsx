@@ -51,9 +51,9 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p className="text-lg text-brand-lightGray mb-8">
-                Creativa Latam es un grupo de comunicadores con focalización en diferentes áreas. 
-                Nuestro equipo cuenta con programadores, diseñadores y especialistas en todos los 
-                aspectos que hacen a la comunicación digital.
+                Creativa Latam is a group of communicators focused on various areas. 
+                Our team includes programmers, designers, and specialists in all aspects 
+                of digital communication.
               </p>
               
               <Link to="/contact">

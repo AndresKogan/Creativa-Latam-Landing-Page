@@ -11,10 +11,10 @@ const About = () => {
   return (
     <div className={`${isMobile ? 'min-h-screen' : 'h-screen'} flex items-center justify-center relative`}>
       <div 
-        className="absolute inset-0 z-0 opacity-10 flex items-center justify-center" 
+        className="absolute inset-0 z-0 opacity-20 flex items-center justify-center" 
       >
         <img 
-          src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
+          src="/lovable-uploads/5d0a39de-db93-4787-8040-fa110c484574.png" 
           alt="Creativa Latam Logo" 
           className="w-96 h-auto opacity-20"
         />

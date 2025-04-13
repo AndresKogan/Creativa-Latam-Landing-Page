@@ -74,7 +74,7 @@ const Services = () => {
 
         {/* Branding Section */}
         <motion.section 
-          className="flex-1 bg-brand-blue relative flex items-center justify-center py-24"
+          className="flex-1 bg-brand-blue relative flex items-center justify-center py-24 px-8"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -88,12 +88,12 @@ const Services = () => {
             }}
           ></div>
           
-          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12 flex flex-col h-auto">            
-            <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3 mt-16">
+          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12 flex flex-col h-full">            
+            <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3 mt-20">
               {t('services.branding.title')}
             </h2>
             
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-4 mb-auto">
               {brandingFeatures.map((feature, index) => (
                 <li key={index} className="flex items-start">
                   <span className="text-brand-yellow mr-2">•</span>
@@ -102,7 +102,7 @@ const Services = () => {
               ))}
             </ul>
             
-            <div className="flex justify-center mt-auto">
+            <div className="flex justify-center mt-8">
               <Button
                 onClick={() => setIsEmailModalOpen(true)}
                 className="bg-brand-red hover:bg-brand-red/90 text-white px-6 py-3 text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
@@ -115,7 +115,7 @@ const Services = () => {
         
         {/* E-commerce Section */}
         <motion.section 
-          className="flex-1 bg-brand-lightBlue relative flex items-center justify-center py-24"
+          className="flex-1 bg-brand-lightBlue relative flex items-center justify-center py-24 px-8"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -129,12 +129,12 @@ const Services = () => {
             }}
           ></div>
           
-          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12 flex flex-col h-auto">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3 mt-16">
+          <div className="relative z-10 max-w-md mx-auto p-8 md:p-12 flex flex-col h-full">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center border-b border-white/20 pb-3 mt-20">
               {t('services.ecommerce.title')}
             </h2>
             
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-4 mb-auto">
               {ecommerceFeatures.map((feature, index) => (
                 <li key={index} className="flex items-start">
                   <span className="text-brand-yellow mr-2">•</span>
@@ -143,7 +143,7 @@ const Services = () => {
               ))}
             </ul>
             
-            <div className="flex justify-center mt-auto">
+            <div className="flex justify-center mt-8">
               <WhatsAppButton className="bg-brand-red hover:bg-brand-red/90 text-white px-6 py-3 text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105" />
             </div>
           </div>
