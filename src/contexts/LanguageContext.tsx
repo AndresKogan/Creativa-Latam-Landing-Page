@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Language = 'en' | 'es';
@@ -20,6 +19,7 @@ const translations = {
     
     // Home page
     'home.title': 'Bring your brand into a USD 89 trillion digital environment',
+    'home.description': 'Creativa Latam is a group of communicators focused on various areas. Our team includes programmers, designers, and specialists in all aspects of digital communication.',
     'home.cta': 'Contact Us',
     
     // Services page
@@ -75,6 +75,7 @@ const translations = {
     
     // Home page
     'home.title': 'Lleva tu marca a un entorno digital de USD 89 billones',
+    'home.description': 'Creativa Latam es un grupo de comunicadores con focalización en diferentes áreas. Nuestro equipo cuenta con programadores, diseñadores y especialistas en todos los aspectos que hacen a la comunicación digital.',
     'home.cta': 'Contáctanos',
     
     // Services page

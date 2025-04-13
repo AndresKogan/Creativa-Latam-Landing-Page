@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -51,9 +50,7 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p className="text-lg text-brand-lightGray mb-8">
-                Creativa Latam is a group of communicators focused on various areas. 
-                Our team includes programmers, designers, and specialists in all aspects 
-                of digital communication.
+                {t('home.description')}
               </p>
               
               <Link to="/contact">
