@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -30,11 +29,15 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
+          DEFAULT: '#2844ED',
+          light: '#2882ED',
+          dark: '#4C28ED',
+          accent: '#8D28ED',
+          purple: '#CD28ED',
+          lavender: '#9580F0'
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
+          DEFAULT: '#8D28ED',
           foreground: 'hsl(var(--secondary-foreground))'
         },
         destructive: {
@@ -46,7 +49,7 @@ export default {
           foreground: 'hsl(var(--muted-foreground))'
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
+          DEFAULT: '#CD28ED',
           foreground: 'hsl(var(--accent-foreground))'
         },
         popover: {
@@ -57,12 +60,13 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
         },
-        // Custom colors
         brand: {
-          red: "#E63946",
-          blue: "#1D3557",
-          lightBlue: "#457B9D",
-          yellow: "#FFD166",
+          blue: '#2844ED',
+          purple: '#8D28ED',
+          indigo: '#4C28ED',
+          lightBlue: '#2882ED',
+          pink: '#CD28ED',
+          lavender: '#9580F0',
           dark: "#121212",
           darkGray: "#232323",
           gray: "#333333",
