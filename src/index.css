@@ -2,7 +2,7 @@
 @layer base {
   @media (min-width: 768px) {
     html, body {
-      @apply overflow-auto; // Change from overflow-hidden to overflow-auto
+      @apply overflow-auto; /* Change from overflow-hidden to overflow-auto */
     }
   }
 }
