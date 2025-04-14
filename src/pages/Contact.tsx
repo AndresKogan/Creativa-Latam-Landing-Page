@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
@@ -119,7 +118,7 @@ const Contact = () => {
   const DesktopContact = () => (
     <div className="min-h-screen flex">
       {/* Email Section - Blue */}
-      <section className="flex-1 flex flex-col items-center justify-center p-8 bg-brand-blue relative overflow-hidden">
+      <section className="flex-1 flex flex-col items-center justify-start p-8 pt-32 bg-brand-blue relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10" style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=1920&q=80")',
           backgroundSize: 'cover',
@@ -132,7 +131,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center">
             <div className="bg-white rounded-full p-4 shadow-lg">
               <Mail className="h-10 w-10 text-brand-red" />
             </div>
@@ -147,7 +146,7 @@ const Contact = () => {
       </section>
       
       {/* WhatsApp Section - Red */}
-      <section className="flex-1 flex flex-col items-center justify-center p-8 bg-brand-red relative overflow-hidden">
+      <section className="flex-1 flex flex-col items-center justify-start p-8 pt-32 bg-brand-red relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10" style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=1920&q=80")',
           backgroundSize: 'cover',
@@ -160,7 +159,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center">
             <div className="bg-white rounded-full p-4 shadow-lg">
               <MessageCircle className="h-10 w-10 text-[#25D366]" />
             </div>
@@ -181,7 +180,7 @@ const Contact = () => {
       </section>
       
       {/* Calendar Section - Yellow */}
-      <section className="flex-1 flex flex-col items-center justify-center p-8 bg-brand-yellow relative overflow-hidden">
+      <section className="flex-1 flex flex-col items-center justify-start p-8 pt-32 bg-brand-yellow relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10" style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1596920566403-2072ed25d7f4?auto=format&fit=crop&w=1920&q=80")',
           backgroundSize: 'cover',
@@ -194,7 +193,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center">
             <div className="bg-white rounded-full p-4 shadow-lg">
               <Calendar className="h-10 w-10 text-brand-lightBlue" />
             </div>
