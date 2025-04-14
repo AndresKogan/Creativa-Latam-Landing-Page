@@ -1,74 +1,8 @@
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer base {
-  :root {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 354 78% 56%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 54% 23%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
-
-    --accent: 212 46% 44%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 30%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 354 78% 56%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 212 46% 44%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 0 0% 30%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  html, body {
-    height: 100%;
-  }
-
-  body {
-    @apply bg-brand-dark text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-
   @media (min-width: 768px) {
     html, body {
-      @apply overflow-hidden;
+      @apply overflow-auto; // Change from overflow-hidden to overflow-auto
     }
-  }
-}
-
-@layer utilities {
-  .section-container {
-    @apply container mx-auto px-4 md:px-8 py-16;
   }
 }
