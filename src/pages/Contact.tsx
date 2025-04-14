@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
@@ -7,7 +8,6 @@ import CalendlyModal from '@/components/CalendlyModal';
 import { Calendar, MessageCircle, Mail, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useIsMobile } from '@/hooks/use-mobile';
-import Footer from '@/components/Footer';
 
 const Contact = () => {
   const { t, language } = useLanguage();
@@ -210,7 +210,7 @@ const Contact = () => {
         </section>
       </div>
       
-      <Footer />
+      {/* Removed the Footer component from here */}
       
       <CalendlyModal
         isOpen={isCalendlyModalOpen}
