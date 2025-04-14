@@ -29,15 +29,11 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: '#2844ED',
-          light: '#2882ED',
-          dark: '#4C28ED',
-          accent: '#8D28ED',
-          purple: '#CD28ED',
-          lavender: '#9580F0'
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))'
         },
         secondary: {
-          DEFAULT: '#8D28ED',
+          DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))'
         },
         destructive: {
@@ -49,7 +45,7 @@ export default {
           foreground: 'hsl(var(--muted-foreground))'
         },
         accent: {
-          DEFAULT: '#CD28ED',
+          DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))'
         },
         popover: {
@@ -61,12 +57,10 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         },
         brand: {
-          blue: '#2844ED',
-          purple: '#8D28ED',
-          indigo: '#4C28ED',
-          lightBlue: '#2882ED',
-          pink: '#CD28ED',
-          lavender: '#9580F0',
+          red: "#E63946",
+          blue: "#1D3557",
+          lightBlue: "#457B9D",
+          yellow: "#FFD166",
           dark: "#121212",
           darkGray: "#232323",
           gray: "#333333",
