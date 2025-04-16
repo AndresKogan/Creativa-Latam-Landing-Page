@@ -43,7 +43,7 @@ const Contact = () => {
         </Button>
         
         {openSection === 'email' && (
-          <div className="p-6">
+          <div className="p-6 bg-white"> {/* Changed background to white */}
             <ContactForm className="mt-4" />
           </div>
         )}
