@@ -25,7 +25,7 @@ interface ContactFormProps {
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<FormValues>({
@@ -70,7 +70,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
                     <SelectValue placeholder={t('email.service')} />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent>
+                <SelectContent className="bg-white">
                   <SelectItem value="branding">{t('services.branding.title')}</SelectItem>
                   <SelectItem value="ecommerce">{t('services.ecommerce.title')}</SelectItem>
                 </SelectContent>
@@ -103,7 +103,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>
+                {language === 'es' ? 'Mensaje' : 'Message'}
+              </FormLabel>
               <FormControl>
                 <Textarea 
                   placeholder={t('email.placeholder')} 
