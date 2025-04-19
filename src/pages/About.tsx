@@ -56,6 +56,7 @@ const About = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ scale: 1.02 }}
             >
               <h2 className="text-2xl font-bold text-white mb-4 text-center ">
                 {language === 'en' ? 'Mission' : 'Misión'}
@@ -71,6 +72,7 @@ const About = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
+              whileHover={{ scale: 1.02 }}
             >
               <h2 className="text-2xl font-bold text-white mb-4 text-center">
                 {language === 'en' ? 'Vision' : 'Visión'}
