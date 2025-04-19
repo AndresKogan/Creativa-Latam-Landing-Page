@@ -16,8 +16,8 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="bg-brand-darkGray border border-white/10 text-white sm:max-w-[425px] rounded-xl shadow-2xl backdrop-blur-md">
-        <div 
-          className="absolute inset-0 z-0 opacity-20 rounded-xl overflow-hidden" 
+        <div
+          className="absolute inset-0 z-0 opacity-20 rounded-xl overflow-hidden"
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1473091534298-04dcbce3278c?auto=format&fit=crop&w=1920&q=80")',
             backgroundSize: 'cover',
@@ -27,9 +27,9 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
         ></div>
         <DialogHeader className="relative z-10">
           <DialogTitle className="text-2xl font-bold text-white flex items-center justify-center">
-            <img 
-              src="/lovable-uploads/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png" 
-              alt="Creativa Latam Logo" 
+            <img
+              src="/images/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png"
+              alt="Creativa Latam Logo"
               className="w-24 h-auto mb-4"
             />
           </DialogTitle>
@@ -37,7 +37,7 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
             {t('email.title')}
           </DialogTitle>
         </DialogHeader>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}

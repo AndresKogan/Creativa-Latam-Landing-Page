@@ -22,6 +22,9 @@ export default {
       }
     },
     extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],  // This sets Montserrat as the default sans-serif font
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

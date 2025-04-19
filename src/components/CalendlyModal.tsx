@@ -33,12 +33,12 @@ const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose }) => {
             {t('contact.meet.button')}
           </DialogTitle>
         </DialogHeader>
-        
+
         <div className="h-[600px] w-full">
           {isOpen && (
-            <div 
-              className="calendly-inline-widget w-full h-full" 
-              data-url="https://calendly.com/creativalatam/30min"
+            <div
+              className="calendly-inline-widget w-full h-full"
+              data-url="https://calendly.com/creativalatamoficial"
               style={{ minWidth: '320px', height: '600px' }}
             ></div>
           )}

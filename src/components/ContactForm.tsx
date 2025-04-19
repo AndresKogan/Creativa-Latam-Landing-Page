@@ -33,22 +33,22 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
     defaultValues: {
       service: "",
       email: "",
-      message: "",
+      message: t('email.placeholder'),
     },
   });
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    
+
     // In a real application, you would send this data to your backend
     console.log("Form data:", data);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       toast.success("Message sent successfully!");
       form.reset();
-      
+
       if (onSuccess) {
         onSuccess();
       }
@@ -63,7 +63,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
           name="service"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t('email.service')}</FormLabel>
+              <FormLabel>{t('email.service.title')}</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger className="bg-white text-black border-white">
@@ -71,15 +71,15 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="bg-white">
-                  <SelectItem value="branding">{t('services.branding.title')}</SelectItem>
-                  <SelectItem value="ecommerce">{t('services.ecommerce.title')}</SelectItem>
+                  <SelectItem value="branding"> <span translate="no">{t('services.branding.title')}</span></SelectItem>
+                  <SelectItem value="ecommerce"><span translate="no">{t('services.ecommerce.title')}</span></SelectItem>
                 </SelectContent>
               </Select>
-              <FormMessage />
+              <FormMessage className="text-red-500" />
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="email"
@@ -87,17 +87,17 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input 
-                  placeholder="email@example.com" 
-                  {...field} 
+                <Input
+                  placeholder="email@example.com"
+                  {...field}
                   className="bg-white text-black border-white placeholder:text-gray-500"
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-red-500" />
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="message"
@@ -107,24 +107,24 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, onSuccess }) => {
                 {language === 'es' ? 'Mensaje' : 'Message'}
               </FormLabel>
               <FormControl>
-                <Textarea 
-                  placeholder={t('email.placeholder')} 
-                  className="min-h-[120px] bg-white text-black border-white placeholder:text-gray-500" 
-                  {...field} 
+                <Textarea
+                  className="min-h-[120px] bg-white text-black border-white placeholder:text-gray-500"
+                  {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-red-500" />
             </FormItem>
           )}
         />
-        
-        <Button 
-          type="submit" 
+
+        <Button
+          type="submit"
           className="w-full bg-brand-red hover:bg-brand-red/90 text-white font-bold text-lg py-4 shadow-md"
-          disabled={isSubmitting || !form.formState.isValid}
+        // disabled={isSubmitting || !form.formState.isValid}
         >
           {isSubmitting ? "Sending..." : t('email.send')}
         </Button>
+
       </form>
     </Form>
   );

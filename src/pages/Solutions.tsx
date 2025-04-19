@@ -31,8 +31,8 @@ const Solutions = () => {
 
   return (
     <div className="min-h-screen pt-20 relative bg-gradient-to-b from-brand-dark to-brand-darkGray">
-      <div 
-        className="absolute inset-0 z-0 opacity-20" 
+      <div
+        className="absolute inset-0 z-0 opacity-20"
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80")',
           backgroundSize: 'cover',
@@ -40,9 +40,9 @@ const Solutions = () => {
           backgroundRepeat: 'no-repeat'
         }}
       ></div>
-      
+
       <section className="section-container relative z-10">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
@@ -50,15 +50,15 @@ const Solutions = () => {
         >
           {t('nav.solutions')}
         </motion.h1>
-        
-        <motion.div 
+
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid md:grid-cols-3 gap-8 mb-12"
         >
           {/* Metrics & Analysis */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="bg-white bg-opacity-80 rounded-xl p-1.5 shadow-xl backdrop-blur-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
             whileHover={{ scale: 1.02 }}
@@ -83,7 +83,7 @@ const Solutions = () => {
               </ul>
             </div>
           </motion.div>
-          
+
           {/* Communication 360º */}
           <motion.div
             variants={itemVariants}
@@ -118,7 +118,7 @@ const Solutions = () => {
               </ul>
             </div>
           </motion.div>
-          
+
           {/* Digital Assets */}
           <motion.div
             variants={itemVariants}
@@ -132,7 +132,7 @@ const Solutions = () => {
               <ul className="space-y-4">
                 <li className="text-brand-dark text-lg flex items-start">
                   <span className="text-brand-yellow mr-2 font-bold">•</span>
-                  <span>{t('solutions.assets.item1')}</span>
+                  <span translate="no">{t('solutions.assets.item1')}</span>
                 </li>
                 <li className="text-brand-dark text-lg flex items-start">
                   <span className="text-brand-yellow mr-2 font-bold">•</span>
