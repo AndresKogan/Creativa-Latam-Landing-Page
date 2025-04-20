@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="flex items-center mb-6 md:mb-0">
             <Link to="/">
               <img
-                src="/images/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png"
+                src="/images/LogoSolo.png"
                 alt="Creativa Latam Logo"
                 className="h-12 w-auto"
               />

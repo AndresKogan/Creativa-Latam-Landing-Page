@@ -5,9 +5,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
+
 const Header = () => {
   const { t, language, setLanguage } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const location = useLocation();
 
   const toggleLanguage = () => {
@@ -19,9 +21,9 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img
-            src="/images/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png"
+            src="/images/LogoSolo.png"
             alt="Creativa Latam Logo"
-            className="h-10 mr-3"
+            className="h-7 mr-3"
           />
           <span className="text-2xl font-bold text-white">CreativaLatam</span>
         </Link>
@@ -34,7 +36,7 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-6 w-6 text-white ml-5" /> : <Menu className="h-6 w-6 text-white ml-5" />}
           </Button>
         </div>
 

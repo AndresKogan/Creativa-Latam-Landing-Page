@@ -28,7 +28,7 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
         <DialogHeader className="relative z-10">
           <DialogTitle className="text-2xl font-bold text-white flex items-center justify-center">
             <img
-              src="/images/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png"
+              src="/images/MarcaCompleta.png"
               alt="Creativa Latam Logo"
               className="w-24 h-auto mb-4"
             />

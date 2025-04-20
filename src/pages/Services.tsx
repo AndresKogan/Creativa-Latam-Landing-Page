@@ -63,7 +63,7 @@ const Services = () => {
         {/* Logo centered at the top */}
         <div className="absolute top-0 left-0 right-0 z-10 flex justify-center mt-16">
           <motion.img
-            src="/images/d8f17e22-1254-43d0-b7bd-a5194645ce3b.png"
+            src="/images/MarcaCompleta.png"
             alt="Creativa Latam Logo"
             className="w-32 h-auto"
             initial={{ opacity: 0, y: -20 }}

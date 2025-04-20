@@ -19,7 +19,7 @@ const translations = {
 
     // Home page
     'home.title': 'Bring your brand into a USD 89 trillion digital environment',
-    'home.description': 'Creativa Latam is a group of communicators focused on various areas. Our team includes programmers, designers, and specialists in all aspects of digital communication.',
+    'home.description': 'Creativa Latam is a team of communication professionals with expertise in various fields. Our team includes developers, designers, and specialists in every area of digital communication.',
     'home.cta': 'Contact Us',
 
     // Services page
